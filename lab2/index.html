@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+    <a class="logo" href="#home">Recipe Manager</a>
+    <button class="burger" id="burger" aria-label="Відкрити меню">☰</button>
+    <nav class="nav" id="nav">
+        <a href="#home">Головна</a>
+        <a href="#recipes">Рецепти</a>
+        <a href="#add">Додати</a>
+        <a href="#contacts">Контакти</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Система керування рецептами</h1>
+            <p>Застосунок для створення, перегляду, пошуку, редагування та видалення кулінарних рецептів.</p>
+            <div class="hero-actions">
+                <a class="btn" href="#add">Додати рецепт</a>
+                <a class="btn btn-light" href="#recipes">Переглянути рецепти</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-section" id="add">
+        <div class="section-title">
+            <p>Форма введення даних</p>
+            <h2 id="formTitle">Додати рецепт</h2>
+        </div>
+
+        <form id="recipeForm">
+            <input type="hidden" id="recipeId">
+            <label>Назва рецепта<input type="text" id="title" placeholder="Наприклад: Паста з томатами" required></label>
+            <label>Опис<textarea id="description" placeholder="Короткий опис рецепта" required></textarea></label>
+            <label>Інгредієнти<textarea id="ingredients" placeholder="Паста, томати, сир..." required></textarea></label>
+            <div class="form-row">
+                <label>Категорія<input type="text" id="category" placeholder="Основна страва" required></label>
+                <label>Час, хв<input type="number" id="cookingTime" min="1" placeholder="25" required></label>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" id="submitBtn">Додати</button>
+                <button type="button" class="secondary" id="cancelEdit" hidden>Скасувати редагування</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="recipes-section" id="recipes">
+        <div class="section-title">
+            <p>READ / SELECT</p>
+            <h2>Список рецептів</h2>
+        </div>
+        <div class="toolbar">
+            <input type="search" id="searchInput" placeholder="Пошук за назвою або категорією">
+            <button type="button" class="secondary" id="reloadBtn">Оновити</button>
+        </div>
+        <div class="message" id="message"></div>
+        <div class="recipes-grid" id="recipesList"></div>
+    </section>
+        
+    </section>
+</main>
+
+<footer class="footer" id="contacts">
+    <p>© 2026 Recipe Manager</p>
+    <p>Email: recipe.manager@example.com</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
