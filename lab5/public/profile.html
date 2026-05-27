@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Профіль</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="header">
+  <a class="logo" href="/">Recipe Manager</a>
+  <button class="burger" id="burger" aria-label="Відкрити меню">☰</button>
+  <nav class="nav" id="nav">
+    <a href="/">Головна</a>
+    <a href="/#recipes">Рецепти</a>
+    <a href="/#add" class="auth-only">Додати</a>
+    <a href="/profile" class="auth-only">Профіль</a>
+    <a href="#" id="logoutBtn" class="auth-only">Logout</a>
+    <a href="/login" class="guest-only">Вхід</a>
+    <a href="/register" class="guest-only">Реєстрація</a>
+  </nav>
+</header>
+<div class="user-panel">
+  <p id="currentUser">Користувач не авторизований</p>
+</div>
+<main>
+  <section class="form-section" id="profile">
+    <div class="section-title"><p>Protected route</p><h2>Профіль</h2></div>
+    <div class="profile-box">
+      <form id="profileForm">
+        <label>Нове ім'я<input type="text" id="profileName" placeholder="Нове ім'я"></label>
+        <label>Новий email<input type="email" id="profileEmail" placeholder="Новий email"></label>
+        <button type="submit">Оновити профіль</button>
+      </form>
+      <form id="passwordForm">
+        <label>Старий пароль<input type="password" id="oldPassword" placeholder="Старий пароль"></label>
+        <label>Новий пароль<input type="password" id="newPassword" placeholder="Новий пароль"></label>
+        <button type="submit">Змінити пароль</button>
+      </form>
+      <form id="forgotForm">
+        <label>Email для відновлення<input type="email" id="forgotEmail" placeholder="Email для відновлення пароля"></label>
+        <button type="submit">Відновити пароль</button>
+      </form>
+      <button id="deleteProfileBtn" class="danger" type="button">Видалити користувача</button>
+      <p id="profileMessage" class="message"></p>
+    </div>
+  </section>
+</main>
+<footer class="footer" id="contacts">
+  <p>© 2026 Recipe Manager</p>
+  <p>Email: recipe.manager@example.com</p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "name": "recipe-manager-lab4",
+  "version": "1.0.0",
+  "description": "Recipe Manager REST API with logging, file uploads and performance monitoring",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "pm2:start": "pm2 start server.js --name recipe-manager-lab4",
+    "pm2:logs": "pm2 logs recipe-manager-lab4",
+    "pm2:restart": "pm2 restart recipe-manager-lab4",
+    "test": "jest",
+    "load-test": "artillery run artillery.yml"
+  },
+  "dependencies": {
+    "bcryptjs": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "express-rate-limit": "latest",
+    "express-validator": "latest",
+    "jsonwebtoken": "latest",
+    "morgan": "latest",
+    "multer": "latest",
+    "mysql2": "latest",
+    "nodemailer": "^8.0.7",
+    "passport": "latest",
+    "passport-google-oauth20": "latest",
+    "sequelize": "latest",
+    "uuid": "latest",
+    "winston": "latest"
+  },
+  "devDependencies": {
+    "artillery": "^2.0.31",
+    "helmet": "^8.1.0",
+    "jest": "^30.4.2",
+    "node-cache": "^5.1.2",
+    "nodemon": "latest",
+    "supertest": "^7.2.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
