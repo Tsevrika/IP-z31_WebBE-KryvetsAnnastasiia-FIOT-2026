@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Реєстрація</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="header">
+  <a class="logo" href="/">Recipe Manager</a>
+  <button class="burger" id="burger" aria-label="Відкрити меню">☰</button>
+  <nav class="nav" id="nav">
+    <a href="/">Головна</a>
+    <a href="/#recipes">Рецепти</a>
+    <a href="/#add" class="auth-only">Додати</a>
+    <a href="/profile" class="auth-only">Профіль</a>
+    <a href="#" id="logoutBtn" class="auth-only">Logout</a>
+    <a href="/login" class="guest-only">Вхід</a>
+    <a href="/register" class="guest-only">Реєстрація</a>
+  </nav>
+</header>
+<main class="auth-page">
+  <section class="auth-card">
+    <h1>Реєстрація</h1>
+    <p class="auth-subtitle">Новий користувач завжди створюється з роллю <b>user</b>. Адмін створюється тільки в коді.</p>
+    <form id="registerForm">
+      <label>Ім'я<input type="text" id="regName" placeholder="Ім'я" required></label>
+      <label>Email<input type="email" id="regEmail" placeholder="Email" required></label>
+      <label>Пароль<input type="password" id="regPassword" placeholder="Мінімум 6 символів" required></label>
+      <label>Підтвердження пароля<input type="password" id="regConfirmPassword" placeholder="Повторіть пароль" required></label>
+      <button type="submit">Зареєструватися</button>
+    </form>
+    <p id="authMessage" class="message"></p>
+    <p class="auth-links">Вже маєш акаунт? <a href="/login">Увійти</a></p>
+  </section>
+</main>
+<footer class="footer" id="contacts">
+  <p>© 2026 Recipe Manager</p>
+  <p>Email: recipe.manager@example.com</p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
