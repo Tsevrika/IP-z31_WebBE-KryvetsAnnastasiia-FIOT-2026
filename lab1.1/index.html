@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">Recipe Manager</div>
+
+    <button class="burger" id="burger">
+        ☰
+    </button>
+
+    <nav class="nav" id="nav">
+        <a href="#home">Головна</a>
+        <a href="#recipes">Рецепти</a>
+        <a href="#add">Додати рецепт</a>
+        <a href="#contacts">Контакти</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <h1>Система керування рецептами</h1>
+        <p>Зберігайте, переглядайте та керуйте улюбленими рецептами.</p>
+    </section>
+
+    <section class="form-section" id="add">
+        <h2>Додати рецепт</h2>
+
+        <form id="recipeForm">
+            <input type="text" id="title" placeholder="Назва рецепта" required>
+            <textarea id="description" placeholder="Опис рецепта" required></textarea>
+            <textarea id="ingredients" placeholder="Інгредієнти" required></textarea>
+            <input type="text" id="category" placeholder="Категорія" required>
+            <input type="number" id="cookingTime" placeholder="Час приготування, хв" required>
+
+            <button type="submit">Додати</button>
+        </form>
+    </section>
+
+    <section class="recipes-section" id="recipes">
+        <h2>Список рецептів</h2>
+
+        <div class="recipes-grid" id="recipesList">
+            <div class="recipe-card">
+                <h3>Паста з томатами</h3>
+                <p>Смачна паста з томатним соусом.</p>
+                <p><strong>Інгредієнти:</strong> паста, томати, сир</p>
+                <p><strong>Категорія:</strong> Основна страва</p>
+                <p><strong>Час:</strong> 25 хв</p>
+            </div>
+
+            <div class="recipe-card">
+                <h3>Овочевий салат</h3>
+                <p>Легкий салат зі свіжих овочів.</p>
+                <p><strong>Інгредієнти:</strong> огірки, помідори, зелень</p>
+                <p><strong>Категорія:</strong> Салат</p>
+                <p><strong>Час:</strong> 10 хв</p>
+            </div>
+
+            <div class="recipe-card">
+                <h3>Млинці</h3>
+                <p>Домашні млинці до сніданку.</p>
+                <p><strong>Інгредієнти:</strong> молоко, яйця, борошно</p>
+                <p><strong>Категорія:</strong> Десерт</p>
+                <p><strong>Час:</strong> 30 хв</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer" id="contacts">
+    <p>© 2026 Recipe Manager</p>
+    <p>Email: recipe.manager@example.com</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
