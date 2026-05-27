@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Вхід</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="header">
+  <a class="logo" href="/">Recipe Manager</a>
+  <button class="burger" id="burger" aria-label="Відкрити меню">☰</button>
+  <nav class="nav" id="nav">
+    <a href="/">Головна</a>
+    <a href="/#recipes">Рецепти</a>
+    <a href="/#add" class="auth-only">Додати</a>
+    <a href="/profile" class="auth-only">Профіль</a>
+    <a href="#" id="logoutBtn" class="auth-only">Logout</a>
+    <a href="/login" class="guest-only">Вхід</a>
+    <a href="/register" class="guest-only">Реєстрація</a>
+  </nav>
+</header>
+<main class="auth-page">
+  <section class="auth-card">
+    <h1>Вхід</h1>
+    <p class="auth-subtitle">Увійди, щоб додавати, редагувати та видаляти свої рецепти.</p>
+    <form id="loginForm">
+      <label>Email<input type="email" id="loginEmail" placeholder="Email" required></label>
+      <label>Пароль<input type="password" id="loginPassword" placeholder="Пароль" required></label>
+      <button type="submit">Увійти</button>
+    </form>
+    <button id="googleBtn" class="google-button" type="button">Google login</button>
+    <form id="forgotForm" class="small-form">
+      <label>Email для відновлення пароля<input type="email" id="forgotEmail" placeholder="Email"></label>
+      <button type="submit" class="secondary">Відновити пароль</button>
+    </form>
+    <p id="authMessage" class="message"></p>
+    <p class="auth-links">Немає акаунта? <a href="/register">Зареєструватися</a></p>
+  </section>
+</main>
+<footer class="footer" id="contacts">
+  <p>© 2026 Recipe Manager</p>
+  <p>Email: recipe.manager@example.com</p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

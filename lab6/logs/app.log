@@ -1,0 +1,12 @@
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-05-18T18:57:28.464Z"}
+{"level":"info","message":{"method":"GET","responseTimeMs":6.92,"statusCode":304,"type":"performance","url":"/api-docs/"},"timestamp":"2026-05-18T18:57:49.124Z"}
+{"level":"info","message":{"method":"GET","responseTimeMs":3.25,"statusCode":200,"type":"performance","url":"/api-docs/swagger-ui-init.js"},"timestamp":"2026-05-18T18:57:49.206Z"}
+{"level":"info","message":{"method":"GET","responseTimeMs":12.03,"statusCode":200,"type":"performance","url":"/api-docs/swagger-ui.css"},"timestamp":"2026-05-18T18:57:49.210Z"}
+{"level":"info","message":{"method":"GET","responseTimeMs":13.17,"statusCode":200,"type":"performance","url":"/api-docs/swagger-ui-standalone-preset.js"},"timestamp":"2026-05-18T18:57:49.216Z"}
+{"level":"info","message":{"method":"GET","responseTimeMs":25.5,"statusCode":200,"type":"performance","url":"/api-docs/swagger-ui-bundle.js"},"timestamp":"2026-05-18T18:57:49.227Z"}
+{"level":"info","message":{"method":"GET","responseTimeMs":2.01,"statusCode":200,"type":"performance","url":"/"},"timestamp":"2026-05-18T18:58:00.968Z"}
+{"level":"info","message":{"method":"GET","responseTimeMs":3.42,"statusCode":200,"type":"performance","url":"/css/style.css"},"timestamp":"2026-05-18T18:58:01.022Z"}
+{"level":"info","message":{"method":"GET","responseTimeMs":4.98,"statusCode":200,"type":"performance","url":"/js/script.js"},"timestamp":"2026-05-18T18:58:01.025Z"}
+{"level":"info","message":{"method":"GET","responseTimeMs":6.18,"statusCode":401,"type":"performance","url":"/api/auth/profile"},"timestamp":"2026-05-18T18:58:01.066Z"}
+{"level":"info","message":{"method":"GET","responseTimeMs":27.41,"statusCode":304,"type":"performance","url":"/api/recipes"},"timestamp":"2026-05-18T18:58:01.088Z"}
+{"level":"info","message":{"method":"GET","responseTimeMs":2.1,"statusCode":404,"type":"performance","url":"/favicon.ico"},"timestamp":"2026-05-18T18:58:01.623Z"}

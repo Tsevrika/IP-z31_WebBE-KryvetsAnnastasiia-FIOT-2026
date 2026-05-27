@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Manager</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="/">Recipe Manager</a>
+  <button class="burger" id="burger" aria-label="Відкрити меню">☰</button>
+  <nav class="nav" id="nav">
+    <a href="/">Головна</a>
+    <a href="/#recipes">Рецепти</a>
+    <a href="/#add" class="auth-only">Додати</a>
+    <a href="/profile" class="auth-only">Профіль</a>
+    <a href="#" id="logoutBtn" class="auth-only">Logout</a>
+    <a href="/login" class="guest-only">Вхід</a>
+    <a href="/register" class="guest-only">Реєстрація</a>
+  </nav>
+</header>
+<div class="user-panel">
+  <p id="currentUser">Користувач не авторизований</p>
+</div>
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="badge">REST API + JWT</span>
+      <h1>Система керування рецептами</h1>
+      <p>Читати рецепти можуть усі. Додавати, редагувати та видаляти рецепти можуть лише авторизовані користувачі.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#add">Додати рецепт</a>
+        <a class="btn btn-light" href="#recipes">Переглянути рецепти</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="add">
+    <div class="section-title">
+      <p>CREATE / protected route</p>
+      <h2 id="formTitle">Додати рецепт</h2>
+    </div>
+    <div class="notice">Щоб додати рецепт, спочатку увійди в акаунт. Перегляд списку рецептів доступний усім.</div>
+    <form id="recipeForm" enctype="multipart/form-data">
+      <input type="hidden" id="recipeId">
+      <label>Назва рецепта<input type="text" id="title" placeholder="Наприклад: Паста з томатами" required></label>
+      <label>Опис<textarea id="description" placeholder="Короткий опис рецепта" required></textarea></label>
+      <label>Інгредієнти<textarea id="ingredients" placeholder="Паста, томати, сир..." required></textarea></label>
+      <label>Фото рецепту
+        <input type="file" id="recipeImages" name="images" accept="image/jpeg,image/png,image/webp" multiple>
+        <small>Необов’язково. Можна вибрати до 5 фото. Дозволено JPG, PNG, WEBP до 2 МБ кожне.</small>
+      </label>
+      <div id="currentRecipeImage" class="current-recipe-image"></div>
+      <div class="form-row">
+        <label>Категорія<input type="text" id="category" placeholder="Основна страва" required></label>
+        <label>Час, хв<input type="number" id="cookingTime" min="1" placeholder="25" required></label>
+      </div>
+      <div class="form-buttons">
+        <button type="submit" id="submitBtn">Додати</button>
+        <button type="button" class="secondary" id="cancelEdit" hidden>Скасувати редагування</button>
+      </div>
+    </form>
+    <p id="recipeMessage" class="message"></p>
+  </section>
+
+
+  <section class="recipes-section" id="recipes">
+    <div class="section-title">
+      <p>READ / SELECT</p>
+      <h2>Список рецептів</h2>
+    </div>
+    <div class="toolbar">
+      <input id="searchInput" type="search" placeholder="Пошук за назвою або категорією">
+      <button id="refreshRecipes" type="button" class="secondary">Оновити</button>
+    </div>
+    <div class="recipes-grid" id="recipesList"></div>
+  </section>
+</main>
+<footer class="footer" id="contacts">
+  <p>© 2026 Recipe Manager</p>
+  <p>Email: recipe.manager@example.com</p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
